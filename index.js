@@ -10,6 +10,7 @@ let language = langModule.randomLanguage();
 const url = 'https://en.wikipedia.org/wiki/' + language
 
 // scrapes overview from wikipedia article 
+
 const getOverview = async (url) => {
     try{
         const res = await axios.get(url)
@@ -41,24 +42,26 @@ const getOverview = async (url) => {
 // credit!
 
     
-const randSentence = getOverview(url).then((overview) => {
+
+function randSentence() { const response = getOverview(url).then((overview) => {
     // separates sentences in overview and inserts into an array
     const sentences = overview.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|");
+    language = language.replace(/_/g, ' ')
     
     // picks a random sentences from the array
     const len = sentences.length;
     const randNum = Math.floor(Math.random() * len);
-    return sentences[randNum]
+    let result = {}
+    result[`${language}`] = sentences[randNum]
+    console.log(result)
+    return {result}
 }).catch((error) => {
     console.log(error)
-    return ('Please try again')
+    return ('Please try again') 
 });
+return response
+}
 
 
-randSentence.then((result) => {
-    language = language.replace(/_/g, ' ')
-    console.log(language + ': ' + result)
-    // send as an object { language: result }
-});
-
+module.exports = { randSentence }
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`));
