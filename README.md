@@ -9,5 +9,5 @@ Once it is running, the service will readily listen for any requests. Set your q
 How to Receive Data
 To receive data from the generator, set the queue in your receive file to 'rand_sentence'. After requesting data, the service will send back a random sentence as a JSON response to this queue for your program to consume. 
 
-![UML di![UML diagram microservice](https://user-images.githubusercontent.com/80930289/180602415-6f4fc78e-1fd9-4154-9e15-4e099980d07d.png)
+![UML diagram](https://user-images.githubusercontent.com/80930289/180602415-6f4fc78e-1fd9-4154-9e15-4e099980d07d.png)
 
