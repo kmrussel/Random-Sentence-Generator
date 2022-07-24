@@ -1,5 +1,5 @@
 var amqp = require('amqplib/callback_api');
-const randModule = require('./index.js');
+const randModule = require('./languages.js');
 
 // Citation for the following function: 
 // Date: 07.22.2022
@@ -15,7 +15,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
             throw error1;
         }
 
-        randModule.randSentence().then((res) => {
+        randModule.getSentence().then((res) => {
             var queue = 'rand_sentence';
             var msg = JSON.stringify(res)
     

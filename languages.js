@@ -1,3 +1,4 @@
+const randModule = require('./randSentence.js');
 
 // The following languages are excluded because they have no page or nothing is on their page
 // chichewa, hmong, shona, sundanese
@@ -23,9 +24,15 @@ const languages = ['Afrikaans', 'Albanian_language', 'Amharic', 'Arabic',
 'Telugu', 'Thai_language', 'Turkish_language', 'Ukrainian_language', 'Urdu', 'Uyghur_language', 'Uzbek_language',
 'Vietnamese_language', 'Welsh_language', 'Xhosa_language', 'Yoruba_language', 'Zulu_language']
 
-module.exports = {randomLanguage: function() {
+function randomLanguage() {
         const len = languages.length;
         const randLang = Math.floor(Math.random() * len);
         return languages[randLang]
     }
-}
+
+function getSentence() { 
+    const lang = randomLanguage()
+    return randModule.randSentence('https://en.wikipedia.org/wiki/' + lang, lang 
+)};
+
+module.exports = { getSentence }
