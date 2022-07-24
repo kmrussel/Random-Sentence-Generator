@@ -21,7 +21,7 @@ const languages = ['Afrikaans', 'Albanian_language', 'Amharic', 'Arabic',
 'Russian_language', 'Samoan_language', 'Scottish_Gaelic_language', 'Serbian_language', 'Southern_Sotho',
 'Sindhi_language', 'Sinhala_language', 'Slovak_language', 'Slovene_language', 'Somali_language',
 'Spanish_language', 'Swahili_language', 'Swedish_language', 'Tajik_language','Tamil_language',
-'Telugu', 'Thai_language', 'Turkish_language', 'Ukrainian_language', 'Urdu', 'Uyghur_language', 'Uzbek_language',
+'Telugu_language', 'Thai_language', 'Turkish_language', 'Ukrainian_language', 'Urdu', 'Uyghur_language', 'Uzbek_language',
 'Vietnamese_language', 'Welsh_language', 'Xhosa_language', 'Yoruba_language', 'Zulu_language']
 
 function randomLanguage() {
