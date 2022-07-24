@@ -1,7 +1,10 @@
 var amqp = require('amqplib/callback_api');
 const send = require('./send.js');
 
-
+// Citation for the following function: 
+// Date: 07.22.2022
+// Copied from: 
+// https://www.rabbitmq.com/tutorials/tutorial-one-javascript.html
 amqp.connect('amqp://localhost', function(error0, connection) {
     if (error0) {
         throw error0;

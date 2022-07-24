@@ -1,5 +1,6 @@
 
-// The following languages are excluded because they have no page or nothing is on their page: chichewa, hmong, shona, sundanese
+// The following languages are excluded because they have no page or nothing is on their page
+// chichewa, hmong, shona, sundanese
 
 const languages = ['Afrikaans', 'Albanian_language', 'Amharic', 'Arabic',
 'Armenia', 'Azerbaijani_language', 'Basque_language', 'Belarusian_language', 'Bengali_language',
